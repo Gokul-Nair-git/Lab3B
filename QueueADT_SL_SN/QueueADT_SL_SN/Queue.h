@@ -3,7 +3,7 @@
 #include "SinglyLinkedList.h"
 
 template<class T>
-class Queue : protected SinglyLinkedList
+class Queue : protected SinglyLinkedList<T>
 {
 	public:
 		Queue();
@@ -17,51 +17,44 @@ class Queue : protected SinglyLinkedList
 
 /* Creates an empty Queue object.
  * Pre: None
- * Post: Inherited sort member is set to UNSORTED by default
- */
+ * Post: Inherited sort member is set to UNSORTED by default */
 template<class T>
 Queue<T>::Queue() { sort = UNSORTED; }
 
 /* Adds a new value to the queue's rear.
  * Pre: Queue exists
- * Post: A new element is added to the queue
- */
+ * Post: A new element is added to the queue */
 template<class T>
 void Queue<T>::enqueue(T* value) { add(value); }
 
 /* Removes an element from the queue's head.
  * Pre: Queue exists
- * Post: Returns true if element is removed successfully
- */
+ * Post: Returns true if element is removed successfully */
 template<class T>
-bool Queue<T>::dequeue() { return remove(*(head->getVal())); }
+bool Queue<T>::dequeue() { return remove(*((SinglyLinkedList<T>::head)->getVal())); }
 
 /* Returns the value at the queue's head.
  * Pre: Queue exists
- * Post: Returns a pointer to the value in the head node.
- */
+ * Post: Returns a pointer to the value in the head node. */
 template<class T>
-T* Queue<T>::front() { return head->getVal(); }
+T* Queue<T>::front() { return (SinglyLinkedList<T>::head)->getVal(); }
 
 /* Returns the value at the queue's tail.
  * Pre: Queue exists
- * Post: Returns a pointer to the value in the tail node.
- */
+ * Post: Returns a pointer to the value in the tail node. */
 template<class T>
-T* Queue<T>::rear() { return tail->getVal(); }
+T* Queue<T>::rear() { return (SinglyLinkedList<T>::tail)->getVal(); }
 
 /* Returns if the queue is empty or not.
  * Pre: Queue exists
- * Post: Returns false if the head pointer point to anything and true otherwise
- */
+ * Post: Returns false if the head pointer point to anything and true otherwise */
 template<class T>
-bool Queue<T>::empty() { return head == nullptr };
+bool Queue<T>::empty() { return SinglyLinkedList<T>::head == nullptr; };
 
 /* Removes and destroys all elements from the queue
  * Pre: Queue exists
- * Post: All of queue's elements are destroyed
- */
+ * Post: All of queue's elements are destroyed */
 template<class T>
-void Queue<T>::destroy() { SinglyLinkedList::empty(); }
+void Queue<T>::destroy() { SinglyLinkedList<T>::empty(); }
 
 
