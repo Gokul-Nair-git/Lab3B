@@ -156,6 +156,7 @@
     <ClCompile Include="Currency.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Rupee.h" />
     <ClInclude Include="Currency.h" />
     <ClInclude Include="LinkNode.h" />
