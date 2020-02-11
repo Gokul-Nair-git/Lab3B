@@ -6,9 +6,9 @@ using namespace std;
 
 int main()
 {
-	cout << "Lab 3: Linked List by Santosh Lakshman and Gokul Nair\n";
+	cout << "Lab 3: Queue1 by Santosh Lakshman and Gokul Nair\n";
 
-	Queue<int> list1 = Queue<int>();
+	Queue<int> queue1 = Queue<int>();
 	cout << "\nIntegers in the order in which they inserted into the queue: " << endl;
 	int* intArr[10];
 	intArr[0] = new int(9);
@@ -23,8 +23,10 @@ int main()
 	intArr[9] = new int(6);
 	for (int i = 0; i < 10; i++) {
 		cout << *intArr[i] << endl;
-		list1.enqueue(intArr[i]);
+		queue1.enqueue(intArr[i]);
 	}
-	cout << "Queue front: " << *(list1.front()) << endl;
-	cout << "Queue rear: " << *(list1.rear()) << endl;
+	cout << "Queue front: " << *(queue1.front()) << endl;
+	queue1.dequeue();
+	cout << "Queue front: " << *(queue1.front()) << endl;
+	cout << "Queue rear: " << *(queue1.rear()) << endl;
 }

@@ -31,7 +31,7 @@ void Queue<T>::enqueue(T* value) { SinglyLinkedList<T>::add(value); }
  * Pre: Queue exists
  * Post: Returns true if element is removed successfully */
 template<class T>
-bool Queue<T>::dequeue() { return remove(*((SinglyLinkedList<T>::head)->getVal())); }
+bool Queue<T>::dequeue() { return SinglyLinkedList<T>::remove(*((SinglyLinkedList<T>::head)->getVal())); }
 
 /* Returns the value at the queue's head.
  * Pre: Queue exists
