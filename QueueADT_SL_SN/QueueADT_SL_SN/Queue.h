@@ -19,13 +19,13 @@ class Queue : protected SinglyLinkedList<T>
  * Pre: None
  * Post: Inherited sort member is set to UNSORTED by default */
 template<class T>
-Queue<T>::Queue() { sort = UNSORTED; }
+Queue<T>::Queue() { SinglyLinkedList<T>::sort = UNSORTED; }
 
 /* Adds a new value to the queue's rear.
  * Pre: Queue exists
  * Post: A new element is added to the queue */
 template<class T>
-void Queue<T>::enqueue(T* value) { add(value); }
+void Queue<T>::enqueue(T* value) { SinglyLinkedList<T>::add(value); }
 
 /* Removes an element from the queue's head.
  * Pre: Queue exists
