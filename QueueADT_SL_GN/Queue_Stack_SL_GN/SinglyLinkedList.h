@@ -138,6 +138,11 @@ bool SinglyLinkedList<T>::remove(T value) {
 	if (count == 0 || found == nullptr) {
 		isSuccessful = false;
 	}
+	else if (found == tail) {
+		tail = prevFound;
+		delete found;
+		count--;
+	}
 	else if (prevFound != nullptr) {
 		if (found->getNext() == nullptr) prevFound->setNext(nullptr);
 		else prevFound->setNext(found->getNext());

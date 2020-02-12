@@ -37,7 +37,7 @@ int main()
 		stack1.push(intArr[i]);
 	}
 	cout << "Stack top: " << *(stack1.peek()) << endl;
-	cout << "Popping: " << *(stack1.pop()) << endl;
+	cout << "Popping: " << stack1.pop() << endl;
 	cout << "Stack top: " << *(stack1.peek()) << endl;
 
 }

@@ -8,7 +8,7 @@ class Stack : protected SinglyLinkedList<T> {
 public:
 	Stack();
 	void push(T*);
-	T* pop();
+	T pop();
 	T* peek();
 	bool empty();
 };
@@ -36,8 +36,8 @@ void Stack<T>::push(T* value) {
  * Pre: Stack exists
  * Post: Returns true if element is removed successfully */
 template<class T>
-T* Stack<T>::pop() {
-	T* returnVal = (SinglyLinkedList<T>::tail)->getVal();
+T Stack<T>::pop() {
+	T returnVal = *((SinglyLinkedList<T>::tail)->getVal());
 	SinglyLinkedList<T>::remove(*((SinglyLinkedList<T>::tail)->getVal()));
 	return returnVal;
 }
