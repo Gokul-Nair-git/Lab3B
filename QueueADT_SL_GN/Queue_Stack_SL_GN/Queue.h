@@ -8,11 +8,10 @@ class Queue : protected SinglyLinkedList<T>
 public:
 	Queue();
 	void enqueue(T*);
-	bool dequeue();
+	T dequeue();
 	T* front();
 	T* rear();
 	bool empty();
-	void destroy();
 };
 
 /* Creates an empty Queue object.
@@ -31,7 +30,11 @@ void Queue<T>::enqueue(T* value) { SinglyLinkedList<T>::add(value); }
  * Pre: Queue exists
  * Post: Returns true if element is removed successfully */
 template<class T>
-bool Queue<T>::dequeue() { return SinglyLinkedList<T>::remove(*((SinglyLinkedList<T>::head)->getVal())); }
+T Queue<T>::dequeue() { 
+	T returnVal = *((SinglyLinkedList<T>::head)->getVal());
+	SinglyLinkedList<T>::remove(*((SinglyLinkedList<T>::head)->getVal())); 
+	return returnVal;
+}
 
 /* Returns the value at the queue's head.
  * Pre: Queue exists
@@ -50,11 +53,5 @@ T* Queue<T>::rear() { return (SinglyLinkedList<T>::tail)->getVal(); }
  * Post: Returns false if the head pointer point to anything and true otherwise */
 template<class T>
 bool Queue<T>::empty() { return SinglyLinkedList<T>::head == nullptr; };
-
-/* Removes and destroys all elements from the queue
- * Pre: Queue exists
- * Post: All of queue's elements are destroyed */
-template<class T>
-void Queue<T>::destroy() { SinglyLinkedList<T>::empty(); }
 
 

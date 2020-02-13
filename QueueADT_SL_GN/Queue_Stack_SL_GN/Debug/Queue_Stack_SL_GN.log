@@ -1,8 +1,2 @@
-﻿  Currency.cpp
-  main.cpp
-  Rupee.cpp
-  Generating Code...
-c:\users\sanyl\ldev\lab3b\queueadt_sl_gn\queue_stack_sl_gn\rupee.cpp(27): warning C4715: 'Rupee::operator+': not all control paths return a value
-c:\users\sanyl\ldev\lab3b\queueadt_sl_gn\queue_stack_sl_gn\rupee.cpp(49): warning C4715: 'Rupee::operator-': not all control paths return a value
-c:\users\sanyl\ldev\lab3b\queueadt_sl_gn\queue_stack_sl_gn\rupee.cpp(87): warning C4715: 'Rupee::operator==': not all control paths return a value
-  Queue_Stack_SL_GN.vcxproj -> C:\Users\sanyl\LDEV\Lab3B\QueueADT_SL_GN\Debug\Queue_Stack_SL_GN.exe
+﻿  main.cpp
+  Queue_Stack_SL_GN.vcxproj -> C:\Users\Gokul Satheesh Nair\Repos\Lab3B\QueueADT_SL_GN\Debug\Queue_Stack_SL_GN.exe
